@@ -32,6 +32,10 @@ class PositionedTilesState extends State<PositionedTiles> {
       // child: StatefulColorfulTile(key: UniqueKey()), // <------
     ),
   ];
+//   List<Widget> tiles = [
+//   StatefulColorfulTile(key: UniqueKey()), // Keys added here
+//   StatefulColorfulTile(key: UniqueKey()),
+// ];
 
   @override
   Widget build(BuildContext context) {
