@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'color_generator.dart';
+
 void main() => runApp(
       const MaterialApp(
         home: PositionedTiles(),
@@ -78,28 +80,5 @@ class StatefulColorfulTileState extends State<StatefulColorfulTile> {
         child: const Padding(
           padding: EdgeInsets.all(70.0),
         ));
-  }
-}
-
-class UniqueColorGenerator {
-  static List colorOptions = [
-    Colors.blue,
-    Colors.red,
-    Colors.green,
-    Colors.yellow,
-    Colors.purple,
-    Colors.orange,
-    Colors.indigo,
-    Colors.amber,
-    Colors.black,
-  ];
-  static Random random = Random();
-  static Color getColor() {
-    if (colorOptions.isNotEmpty) {
-      return colorOptions.removeAt(random.nextInt(colorOptions.length));
-    } else {
-      return Color.fromARGB(random.nextInt(256), random.nextInt(256),
-          random.nextInt(256), random.nextInt(256));
-    }
   }
 }
